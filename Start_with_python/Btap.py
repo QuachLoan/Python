@@ -1,3 +1,14 @@
+# Quản lý điểm học sinh, lớp có 10 học sinh
+# Viết chương trình quản lý điểm của 3 môn học Toán, Lý Hoá
+# Menu theo chưucs năng kiểu:
+# Nhập họ tên học sinh
+# Nhập điểm Toán Lý Hoá
+# Lựa chọn in kết quả thống kê của lớp:
+    # Số lượng học sinh
+    # Số lượng học sinh XS/Giỏi/Khá/TB/Yếu
+    # Điểm  tb học sinh cao nhất/ thấp nhất
+    # TB của cả lớp
+
 ten = []
 dtb = []
 

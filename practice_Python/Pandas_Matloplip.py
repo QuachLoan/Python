@@ -1,3 +1,14 @@
+# STT	Thống kê	Ý nghĩa trong lập kế hoạch
+# 1	Top 10 sản phẩm bán chạy nhất	Xác định sản phẩm cần ưu tiên nhập thêm hàng.
+# 2	Top 10 sản phẩm bán chậm nhất	Có kế hoạch giảm giá, khuyến mãi hoặc ngừng nhập.
+# 3	Sản phẩm sắp hết hàng	Chủ động lên kế hoạch nhập hàng trước khi hết kho.
+# 4	Sản phẩm tồn kho lâu	Phát hiện hàng tồn đọng, hạn chế vốn bị chôn trong kho.
+# 5	Doanh thu theo tháng	Lập mục tiêu doanh thu cho các tháng tiếp theo.
+# 6	Doanh thu theo danh mục sản phẩm	Xác định danh mục mang lại doanh thu cao để phân bổ nguồn lực.
+# 7	Tỷ lệ tăng trưởng doanh thu	Đánh giá tình hình kinh doanh và xây dựng mục tiêu tăng trưởng.
+# 8	Giá trị hàng tồn kho	Biết tổng số vốn đang nằm trong kho để cân đối tài chính.
+# 9	Dự báo nhu cầu sản phẩm	Ước tính số lượng hàng cần nhập trong tháng hoặc quý tiếp theo.
+# 10	Lợi nhuận ước tính theo sản phẩm	Xác định sản phẩm có hiệu quả kinh doanh tốt để ưu tiên phát triển.
 import pandas as pd
 import matplotlib.pyplot as plt
 

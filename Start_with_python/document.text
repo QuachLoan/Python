@@ -1,2 +1,5 @@
 - pip là ứng dụng quản lý package
 - code-> pakge->driver -> data
+- mục đích của exceptiob là xử lý ngoại lệ nằm ngoài out ò control của dev , là các lỗi không thể kiểm soát được
+
+
