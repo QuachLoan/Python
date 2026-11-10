@@ -2,4 +2,10 @@
 - code-> pakge->driver -> data
 - mục đích của exceptiob là xử lý ngoại lệ nằm ngoài out ò control của dev , là các lỗi không thể kiểm soát được
 
+- OOP: code xoay quoang duwx lieeuj , thay vi xoay quoang logic
 
+- class la 1 mau de khai bao chung cac thong tin doi tuong
+
+
+
+.\.venv\Scripts\python.exe -m pip install pymongo

@@ -40,10 +40,10 @@ else:
 DonHang["So_luong_Chuyen_Doi"] = pd.to_numeric( DonHang["SoLuong"], errors="coerce")
 DonHang["TyLe_Chuyen_Doi"]= pd.to_numeric(DonHang["TyLeGiamGia"],errors="coerce")
 
-so_luong_lon = DonHang[DonHang["So_luong_Chuyen_Doi"].isna()]
-if  not so_luong_lon.empty:
-    print(so_luong_lon[["MaDH", "SoLuong", "KhachHang"]])
-    print(f"\n tong so dong co ngay khong hop le :{len(so_luong_lon)} dong.")
+so_luong_loi = DonHang[DonHang["So_luong_Chuyen_Doi"].isna()]
+if  not so_luong_loi.empty:
+    print(so_luong_loi[["MaDH", "SoLuong", "KhachHang"]])
+    print(f"\n tong so dong co ngay khong hop le :{len(so_luong_loi)} dong.")
 else:
     print("tat ca hop le")
 
@@ -55,30 +55,35 @@ else:
     print("tat ca hop le")
 
 
-loi_trong = DonHang[
-    DonHang["KhachHang"].isna()
-    | DonHang["SoDienThoai"].isna()
-    | DonHang["MaSP"].isna()
-]
+# loi_trong = DonHang[
+#     DonHang["KhachHang"].isna()
+#     | DonHang["SoDienThoai"].isna()
+#     | DonHang["MaSP"].isna()
+# ]
 
-print("\n Đơn hàng bị trống tên khách hàng, số điện thoại hoặc mã sản phẩm:")
+# print("\n Đơn hàng bị trống tên khách hàng, số điện thoại hoặc mã sản phẩm:")
+# if not loi_trong.empty:
+#   print(loi_trong[["MaDH", "KhachHang", "SoDienThoai", "MaSP"]])
+# else:
+#   print("-> Không có lỗi (Không có ô nào bị bỏ trống ở các cột này).")
+
+
+# DonHang["SoDienThoai_Str"] = DonHang["SoDienThoai"].astype(str).str.strip()
+
+# dinh_dang_chuan = r"^0\d{9}$"
+
+# loi_sdt = DonHang[
+#     (~DonHang["SoDienThoai_Str"].str.match(dinh_dang_chuan))
+#     & (DonHang["SoDienThoai"].notna())
+# ]
+
+# print("\n Đơn hàng có Số điện thoại không hợp lệ (không đủ 10 số hoặc không bắt đầu bằng 0):")
+# if not loi_sdt.empty:
+#   print(loi_sdt[["MaDH", "KhachHang", "SoDienThoai"]])
+# else:
+#   print("-> Không có lỗi (Tất cả số điện thoại hiện có đều đúng định dạng chuẩn).")
+
+loi_trong = DonHang[DonHang["KhachHang"].isna() | DonHang["SoDienThoai"] .isna() | DonHang["MaSP"] .isna()] 
+print("\n don hang bij trong ten khach hang hoac san pham")
 if not loi_trong.empty:
-  print(loi_trong[["MaDH", "KhachHang", "SoDienThoai", "MaSP"]])
-else:
-  print("-> Không có lỗi (Không có ô nào bị bỏ trống ở các cột này).")
-
-
-DonHang["SoDienThoai_Str"] = DonHang["SoDienThoai"].astype(str).str.strip()
-
-dinh_dang_chuan = r"^0\d{9}$"
-
-loi_sdt = DonHang[
-    (~DonHang["SoDienThoai_Str"].str.match(dinh_dang_chuan))
-    & (DonHang["SoDienThoai"].notna())
-]
-
-print("\n Đơn hàng có Số điện thoại không hợp lệ (không đủ 10 số hoặc không bắt đầu bằng 0):")
-if not loi_sdt.empty:
-  print(loi_sdt[["MaDH", "KhachHang", "SoDienThoai"]])
-else:
-  print("-> Không có lỗi (Tất cả số điện thoại hiện có đều đúng định dạng chuẩn).")
+   print()
